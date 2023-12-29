@@ -80,7 +80,7 @@ export function app(): express.Express {
         var seo: any = {
           title: 'Legaltalk Tube',
           description:
-            'Private video consultations with Naturopathic Doctors and Holistic Healers from around the world. Social Discussion on how to heal various ailments.',
+            'Speak face-to-face with attorneys locally of worldwide.',
           image:
             'https://video.legaltalk.tube/assets/banner/LegalTalk-Banner.jpg',
           site: 'https://video.legaltalk.tube/',
