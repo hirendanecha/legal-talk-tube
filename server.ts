@@ -78,14 +78,14 @@ export function app(): express.Express {
         }
         const params = req.params[0];
         var seo: any = {
-          title: 'legaltalk Tube',
+          title: 'Legaltalk Tube',
           description:
             'Private video consultations with Naturopathic Doctors and Holistic Healers from around the world. Social Discussion on how to heal various ailments.',
           image:
-            'https://video.legaltalk.tube/assets/banner/HT-banner-default.png',
+            'https://video.legaltalk.tube/assets/banner/LegalTalk-Banner.jpg',
           site: 'https://video.legaltalk.tube/',
           url: 'https://video.legaltalk.tube' + params,
-          keywords: 'legaltalk Tube',
+          keywords: 'Legaltalk Tube',
         };
         if (
           params.indexOf('channel/') > -1
@@ -126,7 +126,7 @@ export function app(): express.Express {
           const pdhtml = document.createElement('div');
           pdhtml.innerHTML = post?.postdescription || post?.metadescription;
           const talent = {
-            name: post?.title || post?.albumname || 'legaltalk.Tube Post',
+            name: post?.title || post?.albumname || 'Legaltalk.Tube Post',
             description: pdhtml?.textContent || 'Post content',
             image: post?.thumbfilename || post?.metaimage || post?.imageUrl,
           };
