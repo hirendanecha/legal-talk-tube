@@ -6,6 +6,8 @@ import { CommonService } from './common.service';
 import { ToastService } from './toast.service';
 import { CookieService } from 'ngx-cookie-service';
 import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +22,8 @@ export class AuthService {
   constructor(
     private commonService: CommonService,
     private toastService: ToastService,
-    private cookieService: CookieService
+    private cookieService: CookieService,
+    private http:HttpClient
   ) {
 
     // const adminJson = localStorage.getItem('adminAuth') ? JSON.parse(localStorage.getItem('adminAuth') || '') : {};
@@ -140,5 +143,10 @@ export class AuthService {
 
   getUserData() {
     return localStorage.getItem('authUser')
+  }
+  verifyToken(token): Observable<any> {
+    return this.http.get(
+      `${environment.apiUrl}customers/verify-token/${token}`
+    );
   }
 }
