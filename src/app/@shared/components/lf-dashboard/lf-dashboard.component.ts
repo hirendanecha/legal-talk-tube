@@ -39,6 +39,8 @@ export class LfDashboardComponent implements OnInit {
   apiUrl = environment.apiUrl;
   channelId: any;
   channelData: any = {};
+  channelList: any = [];
+
   constructor(
     private route: ActivatedRoute,
     private commonService: CommonService,
